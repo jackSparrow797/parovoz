@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+$data = [
+    'prefix' => 'admin/landing',
+    'middleware' => 'auth'
+];
+Route::group($data, function () {
+    Route::get('/', function () {
+        return "Админка";
+    });
+});
