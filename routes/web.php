@@ -22,10 +22,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 $data = [
     'prefix' => 'admin/landing',
+    'namespace' => 'Admin',
     'middleware' => 'auth'
 ];
 Route::group($data, function () {
     Route::get('/', function () {
-        return "Админка";
+        return view('admin.index');
     });
+    Route::resource('/slider','SliderController')->except([
+        'show'
+    ]);
 });
