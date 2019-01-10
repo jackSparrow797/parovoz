@@ -28,7 +28,7 @@ $data = [
 Route::group($data, function () {
     Route::get('/', function () {
         return view('admin.index');
-    });
+    })->name('admin.home');;
     Route::resource('/slider','SliderController')->except([
         'show'
     ]);
