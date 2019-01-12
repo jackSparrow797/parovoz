@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class LandingSlider extends Model
 {
-    use SoftDeletes;
 
     protected $fillable = ['title', 'sort',  'description'];
 
-    protected $dates = ['deleted_at'];
+
+    public function files()
+    {
+        return $this->morphMany('App\Models\Files', 'filetable');
+    }
 }

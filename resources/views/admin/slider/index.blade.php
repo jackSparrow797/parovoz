@@ -18,12 +18,20 @@
             </div>
 
             @forelse($paginator as $item)
+{{--                @dd($item->files->path)--}}
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
+                                @forelse($item->files as $file)
+                                    <img src="/storage/{{ $file->path }}" width="100%" alt="">
+                                @empty
+                                    <p>Нет Картинки</p>
+                                @endforelse
+                            </div>
+                            <div class="col">
                                 <a href="{{ route('slider.edit', $item->id) }}">
-                                    {{ $item->title }}
+                                    {!! $item->title !!}
                                 </a>
                             </div>
                             <div class="col">
@@ -31,6 +39,13 @@
                             </div>
                             <div class="col">
                                 {{ $item->sort }}
+                            </div>
+                            <div class="col">
+                                <form onsubmit="if(confirm('Удалить?')) { return true } else { return false }" action="{{ route('slider.destroy', $item->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="submit" class="btn btn-danger" value="Удалить">
+                                </form>
                             </div>
                         </div>
 

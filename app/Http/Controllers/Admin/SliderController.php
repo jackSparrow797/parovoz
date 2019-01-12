@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Files;
 use App\Models\LandingSlider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
@@ -15,8 +17,9 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $paginator = LandingSlider::paginate(15);
-        return view('admin.slider.index',compact('paginator'));
+        $paginator = LandingSlider::with('files')->orderBy('sort', 'asc')->paginate(15);
+
+        return view('admin.slider.index', compact('paginator'));
     }
 
     /**
@@ -37,8 +40,12 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        LandingSlider::create($request->all());
-
+        $slider = LandingSlider::create($request->all());
+        if ($request->file('file')) {
+            $path = $request->file('file')->store('uploads/slider', 'public');
+            $file = new Files(['path' => $path]);
+            $slider->files()->save($file);
+        }
         return redirect()->route('slider.index');
     }
 
@@ -61,7 +68,9 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $slide = LandingSlider::find($id);
+//        dd($slide);
+        return view('admin.slider.edit', compact('slide'));
     }
 
     /**
@@ -73,7 +82,22 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $slide = LandingSlider::find($id);
+        $slide->update($request->all());
+
+        $path = [];
+        foreach ($slide->files as $file) {
+            $path[] = $file->path;
+        }
+        $del = Storage::disk('public')->delete($path);
+        $slide->files()->delete();
+
+        if ($request->file('file')) {
+            $path = $request->file('file')->store('uploads/slider', 'public');
+            $file = new Files(['path' => $path]);
+            $slide->files()->save($file);
+        }
+        return redirect()->route('slider.index');
     }
 
     /**
@@ -84,6 +108,15 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $slide = LandingSlider::find($id);
+
+        $path = [];
+        foreach ($slide->files as $file) {
+            $path[] = $file->path;
+        }
+        $del = Storage::disk('public')->delete($path);
+        $slide->files()->delete();
+        $slide->delete();
+        return redirect()->route('slider.index');
     }
 }

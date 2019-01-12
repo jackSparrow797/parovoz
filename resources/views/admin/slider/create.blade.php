@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <form  class="form-horizontal" action="{{ route('slider.store') }}" method="post">
+    <form  class="form-horizontal" action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         @include('admin.slider.partials.form')
     </form>
