@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin/landing',
 
     'logout_url' => 'logout',
 
@@ -115,11 +115,9 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Слайдер',
+            'url'         => 'admin/landing/slider',
             'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
         'ACCOUNT SETTINGS',
         [

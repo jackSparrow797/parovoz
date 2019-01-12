@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\LandingSlider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        dd(__METHOD__);
+        $paginator = LandingSlider::paginate(15);
+        return view('admin.slider.index',compact('paginator'));
     }
 
     /**
@@ -24,7 +26,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.slider.create');
     }
 
     /**
@@ -35,7 +37,9 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        LandingSlider::create($request->all());
+
+        return redirect()->route('slider.index');
     }
 
     /**
