@@ -1,0 +1,17 @@
+[2018-12-24 20:36:43] layer "parovozdigital@gmail.com": Unsupported extension: com
+[2018-12-24 20:36:43] layer "czm18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "www.18ps.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "+7 (964) 184 71 44": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-12-24 20:37:32] layer "+7 (964) 184 71 44": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-12-24 20:37:32] layer "parovozdigital@gmail.com": Unsupported extension: com
+[2018-12-24 20:37:32] layer "www.18ps.ru": Unsupported extension: ru
+[2018-12-24 20:37:32] layer "+7 (965) 841 53 64": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-12-24 20:36:43] layer "+7 (965) 841 53 64": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "+7 (964) 184 71 44": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru
+[2018-12-24 20:36:43] layer "Сайт каталог  «Авторазбор18» www.avtorazbor18.ru": Unsupported extension: ru

@@ -1,0 +1,21 @@
+<svg id="mouse.svg" xmlns="http://www.w3.org/2000/svg" width="14" height="23" viewBox="0 0 14 23">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-1 {
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        stroke-width: 11px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Прямоугольник_скругл._углы_6" data-name="Прямоугольник, скругл. углы 6" class="cls-1" x="0.5" y="0.5" width="13" height="22" rx="6.5" ry="6.5"/>
+  <path id="Фигура_2" data-name="Фигура 2" class="cls-2" d="M848,712h1v5h-1v-5Z" transform="translate(-841.5 -706.5)"/>
+</svg>

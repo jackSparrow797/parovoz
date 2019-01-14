@@ -85,14 +85,15 @@ class SliderController extends Controller
         $slide = LandingSlider::find($id);
         $slide->update($request->all());
 
-        $path = [];
-        foreach ($slide->files as $file) {
-            $path[] = $file->path;
-        }
-        $del = Storage::disk('public')->delete($path);
-        $slide->files()->delete();
 
         if ($request->file('file')) {
+            $path = [];
+            foreach ($slide->files as $file) {
+                $path[] = $file->path;
+            }
+            $del = Storage::disk('public')->delete($path);
+            $slide->files()->delete();
+
             $path = $request->file('file')->store('uploads/slider', 'public');
             $file = new Files(['path' => $path]);
             $slide->files()->save($file);

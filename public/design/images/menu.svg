@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="66" viewBox="0 0 78 66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 11px;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1604" y="54" width="67" height="55" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="4.583"/>
+      <feFlood result="flood" flood-opacity="0.79"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feOffset result="offset-2" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="blur-2" stdDeviation="1.732"/>
+      <feFlood result="flood-2" flood-opacity="0.69"/>
+      <feComposite result="composite-2" operator="in" in2="blur-2"/>
+      <feBlend result="blend" in2="composite"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="translate(-1598.5 -48.5)" style="fill: none; filter: url(#filter)">
+    <path id="menu.svg" class="cls-1" d="M1625,73h24a1,1,0,0,1,0,2h-24A1,1,0,0,1,1625,73Zm0,6h24a1,1,0,1,1,0,2h-24A1,1,0,1,1,1625,79Zm0,6h24a1,1,0,0,1,0,2h-24A1,1,0,0,1,1625,85Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use transform="translate(-1598.5 -48.5)" xlink:href="#menu.svg" style="stroke: #fff; filter: none; fill: none"/>
+</svg>
