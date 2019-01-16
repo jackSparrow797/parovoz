@@ -119,6 +119,16 @@ return [
             'url'         => 'admin/landing/slider',
             'icon'        => 'file',
         ],
+        [
+            'text'        => 'Разделы',
+            'url'         => 'admin/landing/section',
+            'icon'        => 'file',
+        ],
+        [
+            'text'        => 'Предложения',
+            'url'         => 'admin/landing/offer',
+            'icon'        => 'file',
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',

@@ -3,15 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class LandingSlider extends Model
+class Offer extends Model
 {
-
-    protected $fillable = ['title', 'sort', 'description'];
+    protected $fillable = ['title', 'text', 'section_id'];
 
     public function files()
     {
         return $this->morphMany('App\Models\Files', 'filetable');
     }
+
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
+    }
+
+
 }

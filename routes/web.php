@@ -26,8 +26,25 @@ $data = [
 Route::group($data, function () {
     Route::get('/', function () {
         return view('admin.index');
-    })->name('admin.home');;
-    Route::resource('/slider','SliderController')->except([
+    })->name('admin.home');
+    Route::resource('/slider', 'SliderController')->except([
         'show'
     ]);
+    Route::resource('section', 'SectionController')->except([
+        'show'
+    ]);
+    Route::resource('offer', 'OfferController')->except([
+        'show'
+    ]);
+
+
+
+//    Route::group(['prefix'=>'offers'], function () {
+//        Route::resource('/section', 'SectionsController')->except([
+//            'show'
+//        ]);
+//        Route::resource('section.list', 'OffersController')->except([
+//            'show'
+//        ]);
+//    });
 });

@@ -108,7 +108,16 @@ h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 50%;margin: aut
 .blueArrows .arrowSlide.prev  {background: url('../images/left.svg') no-repeat;}
 .blueArrows .arrowSlide.next  {background: url('../images/right.svg') no-repeat;}
 .sliderPadding {padding-left: 40px;padding-right: 40px;}
-
+.btn-green-outer {border-radius: 15px;   background-color: #fff;color:  #0ed59e;  border: 1px solid #0ed59e;}
+.btn-green-outer.active,.btn-green-outer:hover {background: #0ed59e;color: #fff;box-shadow: 0px 9px 10px rgba(14,213,158,0.3);}
+.link_img:hover .hover {display: block;}
+.link_img .hover {display: none;}
+.link_img img {display: block; height: 169px;}
+.link_img:hover img {display: none;}
+.offer_item .card-footer{ background: none;border: none;}
+.offer_item .card {border: none;}
+.offer_section {display: none;}
+.offer_section.active {display: block;}
 
 @media (max-width: 1430px) {
 }
