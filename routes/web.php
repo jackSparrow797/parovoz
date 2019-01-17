@@ -17,6 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/email/offer', 'Mail\MailOfferController@send')->name('send.offer');
 
 $data = [
     'prefix' => 'admin/landing',
@@ -36,15 +37,4 @@ Route::group($data, function () {
     Route::resource('offer', 'OfferController')->except([
         'show'
     ]);
-
-
-
-//    Route::group(['prefix'=>'offers'], function () {
-//        Route::resource('/section', 'SectionsController')->except([
-//            'show'
-//        ]);
-//        Route::resource('section.list', 'OffersController')->except([
-//            'show'
-//        ]);
-//    });
 });

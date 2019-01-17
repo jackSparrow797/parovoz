@@ -45,58 +45,7 @@
         </div>
     </div>
 
-    <div class="row what_we_can_do_you">
-        <div class="container py-5">
-            <h2 class="font-walls text-center mb-5">что мы можем сделать для вашего бизнеса</h2>
-            <div class="row my-3">
-                <div class="col-8 m-auto">
-                    <div class="row offers_links">
-                        @forelse($sections_offer as $key => $sections)
-                            <div class="col">
-                                <a href="#offer{{ $sections->id }}"
-                                   class="btn btn-sm btn-block btn-green-outer @php echo ($key == 0) ? 'active' : '' @endphp">
-                                    {{ $sections->title }}
-                                </a>
-                            </div>
-                        @empty
-                        @endforelse
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @forelse($sections_offer as $key => $sections)
-                    <div class="col-12 offer_section @php echo ($key == 0) ? 'active' : '' @endphp"
-                         id="offer{{ $sections->id }}">
-                        <div class="row slider4 blueArrows sliderPadding">
-                            @forelse($sections->offer as $offer)
-                                <div class="col offer_item">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a href="#" class="link_img">
-                                                @forelse($offer->files as $file_key => $file)
-                                                    <img class="mx-auto @php echo ($file_key == 0) ? "hover" : '' @endphp"
-                                                         src="/storage/{{ $file->path }}" alt="">
-                                                @empty
-                                                @endforelse
-                                            </a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <p class="text-center">{!! $offer->title !!}</p>
-                                            <a href="#" class="btn btn-sm btn-block btn-green-outer">
-                                                Подробнее
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            @empty
-                            @endforelse
-                        </div>
-                    </div>
-                @empty
-                @endforelse
-            </div>
-        </div>
-    </div>
+    @include('landing.parts.advantage')
 
 </div>
 <footer>
@@ -125,6 +74,7 @@
         </div>
     </div>
 </div>
+<div class="window"></div>
 
 </body>
 </html>
