@@ -47,6 +47,12 @@
 
     @include('landing.parts.advantage')
 
+    <div class="row last_works white">
+        <div class="container py-5">
+            <h2 class="font-walls text-center mb-4">Наши последние работы</h2>
+        </div>
+    </div>
+
 </div>
 <footer>
 

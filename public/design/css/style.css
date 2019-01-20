@@ -99,7 +99,7 @@ img {
 .menu-container.show {right: 0;}
 .menu-body ul li {display: block;}
 .menu-body ul li a { font-size: 48px;}
-h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 50%;margin: auto;}
+h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 60%;margin: auto;}
 .advantages p {color: #333333;    font-weight: 400;}
 
 .arrowSlide {position: absolute;top: 50%; display: block;   transform: translateY(-50%);height: 21px; width: 30px;}
@@ -134,6 +134,14 @@ h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 50%;margin: aut
 .popup.show {right: 0;}
 .bgBlue {background-color: #0058b0;}
 .radius-none {border-radius: 0;}
+form .error {border:1px solid red;}
+input[type=text],
+input[type=email],
+textarea {color: #999999!important;}
+.green {color: green;}
+.custom-width {    width: auto;    overflow: auto;}
+.white-nowrap {white-space: nowrap}
+.last_works {background: url('../images/back2.jpg') center top no-repeat; background-size: cover;}
 
 
 @media (max-width: 1430px) {
@@ -145,7 +153,7 @@ h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 50%;margin: aut
 @media (max-width: 992px) {
     .slider_description h2{font-size: 30px;}
     h2 {font-size: 28px;}
-    .menu-container {width: 100%;min-width: 100%;}
+    .menu-container,.popup {width: 100%;min-width: 100%;}
 
 }
 

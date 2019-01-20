@@ -2,12 +2,12 @@
     <div class="container py-5">
         <h2 class="font-walls text-center mb-5">что мы можем сделать для вашего бизнеса</h2>
         <div class="row my-3">
-            <div class="col-8 m-auto">
-                <div class="row offers_links">
+            <div class="col-lg-8 m-auto d-inline-block d-lg-block custom-width">
+                <div class="row offers_links flex-nowrap flex-lg-wrap">
                     @forelse($sections_offer as $key => $sections)
                         <div class="col">
                             <a href="#offer{{ $sections->id }}"
-                               class="btn btn-sm btn-block btn-green-outer @php echo ($key == 0) ? 'active' : '' @endphp">
+                               class="btn btn-sm btn-block btn-green-outer white-nowrap @php echo ($key == 0) ? 'active' : '' @endphp">
                                 {{ $sections->title }}
                             </a>
                         </div>
@@ -60,8 +60,9 @@
     <div class="popup-body">
         <h4></h4>
         <p></p>
-        <form action="{{ route('send.offer') }}" method="post">
+        <form action="{{ route('send.offer') }}" class="ajax" method="post">
             @csrf
+            <div class="response green"></div>
             <div class="form-group">
                 <label for="">Как вас зовут*</label>
                 <input type="text" name="name" class="form-control radius-none" placeholder="Введите ваше имя">

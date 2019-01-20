@@ -79,4 +79,34 @@ $(document).ready(function () {
         $('#advantage_popup input[name=title]').val(offer.find('p.title').text());
         $('#advantage_popup p').text(text);
     });
+
+    $(document).on('submit', 'form.ajax', function () {
+        let action = $(this).attr('action');
+        let form = $(this);
+        form.find('input,textarea').removeClass('error');
+        let method = $(this).attr('method');
+        let msg = form.serialize();
+        form.find('input,textarea').removeClass('error');
+        $.ajax({
+            type: method,
+            url: action,
+            data: msg,
+            dataType: "json",
+            success: function (data) {
+                if (!!(data.message)) {
+                    form[0].reset();
+                    form.find('.response').text(data.message);
+                }
+            },
+            error: function (xhr, str) {
+                $.each(xhr.responseJSON.errors, function (index, value) {
+                    form.find('[name=' + index +']').addClass('error');
+                });
+            }
+        });
+
+        return false;
+    });
+
+
 });

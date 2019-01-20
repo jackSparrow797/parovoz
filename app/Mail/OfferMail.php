@@ -50,4 +50,6 @@ class OfferMail extends Mailable
             ])
             ->subject('Заявка предложения');
     }
+
+
 }
