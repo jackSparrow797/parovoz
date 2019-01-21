@@ -129,6 +129,21 @@ return [
             'url'         => 'admin/landing/offer',
             'icon'        => 'file',
         ],
+        [
+            'text'        => 'Наши работы',
+            'url'         => '#',
+            'icon'        => 'file',
+            'submenu' => [
+                [
+                    'text' => 'Тэги',
+                    'url'  => '/admin/landing/tag',
+                ],
+                [
+                    'text' => 'Работы',
+                    'url'  => '/admin/landing/work',
+                ],
+            ],
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',

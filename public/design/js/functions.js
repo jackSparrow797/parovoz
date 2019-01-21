@@ -7,6 +7,14 @@ $(document).ready(function () {
         dots: true,
         arrows: false,
     });
+    $('.slideOne').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        dotsClass: 'dots-center'
+    });
     $(document).on("click", ".menu-close", function (e) {
         e.preventDefault();
         $('.menu-container').removeClass('show');
@@ -27,6 +35,19 @@ $(document).ready(function () {
         $(target).addClass('active');
 
         $(".slider4").slick('reinit');
+    });
+
+    $(document).on('click', '.works_links a', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+
+        $('.works_links a').removeClass('active');
+        $(this).addClass('active');
+
+        $('.work_section').removeClass('active');
+        $(target).addClass('active');
+
+         $(".sliderOne").slick('reinit');
     });
 
     $('.slider4').slick({

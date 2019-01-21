@@ -19,14 +19,7 @@ class GeneralController extends Controller
         $data['sliders'] = LandingSlider::with('files')->orderBy('sort', 'asc')->get();
         $page = Page::where('title', 'Предложения')->first();
         $data['sections_offer'] = Section::with( 'offer', 'page')->where('page_id', $page->id)->get();
-//        $data['sections_offer'] = $page->section()->get();
-//        $data['offers'] = Offer::with('files', 'section')->orderBy('section_id', 'asc')->get();
-//        $data['offers'] = DB::table('offers')
-//            ->select('title', 'section_id')
-//            ->orderBy('section_id')
-//            ->get();
-
-//        dd($data);
+        $data['sections_work'] = Section::with( 'work', 'page')->where('page_id', $page->id)->get();
         return view('landing.index', $data);
     }
 }

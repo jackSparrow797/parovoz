@@ -14,6 +14,11 @@ class Section extends Model
         return $this->hasMany(Offer::class);
     }
 
+    public function work()
+    {
+        return $this->hasMany(Work::class);
+    }
+
     public function page()
     {
         return $this->belongsTo(page::class);

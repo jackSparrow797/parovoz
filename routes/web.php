@@ -37,4 +37,10 @@ Route::group($data, function () {
     Route::resource('offer', 'OfferController')->except([
         'show'
     ]);
+    Route::resource('tag', 'TagController')->except([
+        'show'
+    ]);
+    Route::resource('work', 'WorkController')->except([
+        'show'
+    ]);
 });
