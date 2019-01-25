@@ -27,7 +27,6 @@ img {
 #body {
     position: relative;
     min-height: 100%;
-    padding-bottom: 140px;
 }
 .header {
     width: 100%;
@@ -190,6 +189,10 @@ textarea {color: #999999!important;}
 .form-white-round textarea:active {border-radius: 20px; color:#fff!important;background: none;   border: 1px solid #ffffff;}
 .form-white-round input::placeholder,
 .form-white-round textarea::placeholder { color: #fff; }
+
+footer {background-color: #333333;}
+footer *{font-size: 24px;    color: #ffffff;    font-weight: 300;}
+
 @media (max-width: 1430px) {
 }
 

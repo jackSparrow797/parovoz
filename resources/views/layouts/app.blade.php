@@ -103,10 +103,37 @@
 
     @include('landing.parts.questions')
 
-</div>
-<footer>
+    <div class="row py-5">
+        <div class="container py-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="font-walls text-center">Новости и статьи</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</footer>
+    <footer class="row white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">+7 (964) 184 71 44</div>
+                <div class="col-md">+7 (965) 841 53 64</div>
+                <div class="col-md">
+                    <a href="#call_back" data-toggle="modal">
+                        перезвоните мне
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="" target="_blank">
+                        <img src="{{ asset('design/images/viber.svg') }}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</div>
+
 
 
 <!-- Modal -->
