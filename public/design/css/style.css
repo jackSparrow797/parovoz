@@ -105,8 +105,10 @@ h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 60%;margin: aut
 .arrowSlide {position: absolute;top: 50%; display: block;   transform: translateY(-50%);height: 21px; width: 30px;}
 .arrowSlide.prev {left:10px;}
 .arrowSlide.next {right:10px;}
-.blueArrows .arrowSlide.prev  {background: url('../images/left.svg') no-repeat;}
-.blueArrows .arrowSlide.next  {background: url('../images/right.svg') no-repeat;}
+.whiteArrows .arrowSlide.prev  {background: url('../images/left.svg') no-repeat;}
+.whiteArrows .arrowSlide.next  {background: url('../images/right.svg') no-repeat;}
+.whiteArrows .arrowSlide.prev  {background: url('../images/arrow_left_white.png') no-repeat;}
+.whiteArrows .arrowSlide.next  {background: url('../images/arrow_right_white.png') no-repeat;}
 .sliderPadding {padding-left: 40px;padding-right: 40px;}
 
 .btn-green-outer,
@@ -118,8 +120,10 @@ h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 60%;margin: aut
 
 .btn-white-outer
 {border-radius: 15px;     color: #ffffff;    border: 1px solid #ffffff;}
-.btn-white-outer:hover
+.btn-white-outer:hover,.btn-white
 {background: #fff;}
+.btn-white {color: #009966;}
+.btn-white:hover {background: none;color: #fff;border: 1px solid;}
 
 .r26 {border-radius: 26px;}
 
@@ -173,9 +177,19 @@ textarea {color: #999999!important;}
 .bgGrey h4 {font-size: 30px;    font-weight: 400;}
 
 .form-green input,
-.form-green textarea
-{border:1px solid #0ed59e;}
+.form-green textarea {border:1px solid #0ed59e;}
 
+.block_trust {background: url('../images/back3.jpg') center top no-repeat;background-size: cover;}
+.trust_item p>b {font-size: 18px;}
+
+.form-white-round input[type=text],
+.form-white-round input[type=email],
+.form-white-round input:focus,.form-white-round input:active,
+.form-white-round textarea,
+.form-white-round textarea:focus,
+.form-white-round textarea:active {border-radius: 20px; color:#fff!important;background: none;   border: 1px solid #ffffff;}
+.form-white-round input::placeholder,
+.form-white-round textarea::placeholder { color: #fff; }
 @media (max-width: 1430px) {
 }
 

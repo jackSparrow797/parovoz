@@ -50,6 +50,59 @@
     @include('landing.parts.works')
 
     @include('landing.parts.payne')
+
+    <div class="row block_trust white py-5">
+        <div class="container py-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="font-walls text-center">почему нам можно<br/>доверять?</h2>
+                </div>
+            </div>
+            <div class="row slider4 whiteArrows sliderPadding mt-5">
+                <div class="col text-center trust_item">
+                    <img class="mb-3 mx-auto" src="{{ asset('design/images/why_1.png') }}" alt="">
+                    <p class="text-center px-4">
+                        <b>Разрабатываем любые проекты под ключ</b><br>
+                        Разработаем ваш проект от создания технического задания до готового продукта
+                    </p>
+                </div>
+                <div class="col text-center trust_item">
+                    <img class="mb-3 mx-auto" src="{{ asset('design/images/why_2.png') }}" alt="">
+                    <p class="text-center px-4">
+                        <b>Отдаем полностью упакованный продукт</b><br>
+                        Отдаем продающий сайт с готовой SEO оптимизацией
+                    </p>
+                </div>
+                <div class="col text-center trust_item">
+                    <img class="mb-3 mx-auto" src="{{ asset('design/images/why_3.png') }}" alt="">
+                    <p class="text-center px-4">
+                        <b>Мы профессионалы своего дела</b><br>
+                        В нашей компании работают сотрудники со стажем от 5 лет
+                    </p>
+                </div>
+                <div class="col text-center trust_item">
+                    <img class="mb-3 mx-auto" src="{{ asset('design/images/why_4.png') }}" alt="">
+                    <p class="text-center px-4">
+                        <b>Индивидуальный подход к каждому клиенту </b><br>
+                        Далеко не каждый клиент знает что ему нужно, мы поможем улучшить ваш проект
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="container py-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="font-walls text-center">клиенты<br/>говорят про нас</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @include('landing.parts.questions')
+
 </div>
 <footer>
 
