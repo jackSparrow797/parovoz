@@ -18,6 +18,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/email/offer', 'Mail\MailOfferController@send')->name('send.offer');
+Route::post('/email/payne', 'Mail\MailPayneController@send')->name('send.payne');
 
 $data = [
     'prefix' => 'admin/landing',

@@ -49,8 +49,7 @@
 
     @include('landing.parts.works')
 
-
-
+    @include('landing.parts.payne')
 </div>
 <footer>
 
