@@ -64,8 +64,14 @@
 <div class="work_popup  popup w-66" id="work_popup">
     <div class="bgWhite px-5  pt-4 pb-5">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col"></div>
+            <div class="row align-items-center">
+                <div class="col">
+                    <ul class="tags m-0">
+                        <li>Дизайн</li>
+                        <li>Проектирование</li>
+                        <li>SEO оптимизация</li>
+                    </ul>
+                </div>
                 <div class="col">
                     <h4>Rostpolikraft</h4>
                     <a href="" target="_blank" class="site">18ps.ru</a>

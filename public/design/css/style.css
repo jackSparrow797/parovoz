@@ -155,7 +155,7 @@ textarea {color: #999999!important;}
 .white-nowrap {white-space: nowrap}
 .last_works {background: url('../images/back2.jpg') center top no-repeat; background-size: cover;}
 
-.work_item .card, .news_item .card {background: none; border: 0;}
+.work_item .card, .news_item .card, .review_item .card {background: none; border: 0;}
 .work_item img {width: 100%;}
 .work_item .card .btn-white-outer {opacity: 0;}
 .work_item .card:hover .btn-white-outer {opacity: 1;}
@@ -202,6 +202,18 @@ footer *{font-size: 24px;    color: #ffffff;    font-weight: 300;}
 .news_popup h4 {font-weight: 400;font-size: 36px;    line-height: 72px;    color: #333333;}
 .news_popup .date {font-size: 16px;    color: #999999;    font-weight: 400;}
 
+.review-text {font-size: 24px;    line-height: 32px;    color: #333333;    font-weight: 900;}
+.review_item .author {font-size: 16px;    color: #333333;    font-weight: 400;    font-style: italic;}
+.review_item .post {font-size: 16px;    color: #999999;    font-weight: 400;    font-style: italic;}
+
+.border-none {border: none;}
+.background-none {background: none;}
+
+.review_preview.slick-current .card {background: linear-gradient(to bottom, #0078ff, #00ff95);}
+
+.tags {font-size: 18px;padding-left: 13px; list-style: none;display: block;border-left: 2px solid #0ed59e;    line-height: 29px;    color: #666666;    font-weight: 400;}
+.work_popup  h4 {font-size: 36px;     color: #333333;    font-weight: 400;}
+.work_popup  a.site {font-size: 16px;    color: #0058b0;    font-weight: 400;}
 
 @media (max-width: 1430px) {
 }

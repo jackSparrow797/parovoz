@@ -49,4 +49,7 @@ Route::group($data, function () {
     Route::resource('news', 'NewsController')->except([
         'show'
     ]);
+    Route::resource('review', 'ReviewController')->except([
+        'show'
+    ]);
 });

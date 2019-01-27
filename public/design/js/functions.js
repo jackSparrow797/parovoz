@@ -179,20 +179,36 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.slider-for').slick({
+    $('.slider-review-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-review-nav'
     });
-    $('.slider-nav').slick({
+    $('.slider-review-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
+        asNavFor: '.slider-review-for',
+        prevArrow: '<a class="prev arrowSlide" href="#"></a>',
+        nextArrow: '<a class="next arrowSlide" href="#"></a>',
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
 

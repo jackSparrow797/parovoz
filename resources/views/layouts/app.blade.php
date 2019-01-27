@@ -91,15 +91,8 @@
         </div>
     </div>
 
-    <div class="row py-5">
-        <div class="container py-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="font-walls text-center">клиенты<br/>говорят про нас</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    @include('landing.parts.reviews')
 
     @include('landing.parts.questions')
 
