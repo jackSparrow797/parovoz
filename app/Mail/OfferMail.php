@@ -35,10 +35,6 @@ class OfferMail extends Mailable
             ->from('jack123456789@mail.ru')
             ->with([
                 'fields' => $this->fields,
-//                'name' => $this->name,
-//                'email' => $this->email,
-//                'phone' => $this->phone,
-//                'text' => $this->text,
             ])
             ->subject('Заявка предложения');
     }

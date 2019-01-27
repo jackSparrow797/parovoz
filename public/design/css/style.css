@@ -104,8 +104,8 @@ h2 {font-size: 48px;    color: #0058b0; font-weight: bold;width: 60%;margin: aut
 .arrowSlide {position: absolute;top: 50%; display: block;   transform: translateY(-50%);height: 21px; width: 30px;}
 .arrowSlide.prev {left:10px;}
 .arrowSlide.next {right:10px;}
-.whiteArrows .arrowSlide.prev  {background: url('../images/left.svg') no-repeat;}
-.whiteArrows .arrowSlide.next  {background: url('../images/right.svg') no-repeat;}
+.blueArrows .arrowSlide.prev  {background: url('../images/left.svg') no-repeat;}
+.blueArrows .arrowSlide.next  {background: url('../images/right.svg') no-repeat;}
 .whiteArrows .arrowSlide.prev  {background: url('../images/arrow_left_white.png') no-repeat;}
 .whiteArrows .arrowSlide.next  {background: url('../images/arrow_right_white.png') no-repeat;}
 .sliderPadding {padding-left: 40px;padding-right: 40px;}
@@ -155,7 +155,7 @@ textarea {color: #999999!important;}
 .white-nowrap {white-space: nowrap}
 .last_works {background: url('../images/back2.jpg') center top no-repeat; background-size: cover;}
 
-.work_item .card{background: none; border: 0;}
+.work_item .card, .news_item .card {background: none; border: 0;}
 .work_item img {width: 100%;}
 .work_item .card .btn-white-outer {opacity: 0;}
 .work_item .card:hover .btn-white-outer {opacity: 1;}
@@ -192,6 +192,16 @@ textarea {color: #999999!important;}
 
 footer {background-color: #333333;}
 footer *{font-size: 24px;    color: #ffffff;    font-weight: 300;}
+
+.news_item  .title {font-size: 16px;    color: #333333;    font-weight: 700;}
+.news_item .date {font-size: 14px;    color: #666666;    font-weight: 400;margin-bottom: 0px;}
+.news_item:hover img {box-shadow: 13px 22.517px 36px rgba(0,0,0,0.36);}
+.btn-green-outer-news {border-radius: 15px;color: #333333;    border: 1px solid #0ed59e;}
+.news_item:hover .btn-green-outer-news {display:block;color: #fff; box-shadow: 0px 9px 10px rgba(14,213,158,0.3);    background-color: #0ed59e;}
+
+.news_popup h4 {font-weight: 400;font-size: 36px;    line-height: 72px;    color: #333333;}
+.news_popup .date {font-size: 16px;    color: #999999;    font-weight: 400;}
+
 
 @media (max-width: 1430px) {
 }

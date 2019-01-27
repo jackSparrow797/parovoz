@@ -103,19 +103,11 @@
 
     @include('landing.parts.questions')
 
-    <div class="row py-5">
-        <div class="container py-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="font-walls text-center">Новости и статьи</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('landing.parts.news')
 
     <footer class="row white py-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md">+7 (964) 184 71 44</div>
                 <div class="col-md">+7 (965) 841 53 64</div>
                 <div class="col-md">
@@ -131,9 +123,8 @@
             </div>
         </div>
     </footer>
-    
-</div>
 
+</div>
 
 
 <!-- Modal -->

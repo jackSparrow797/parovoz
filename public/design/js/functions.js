@@ -1,5 +1,14 @@
 $(document).ready(function () {
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+
     $("input[name=phone]").mask("8 (000) 000-00-00");
+
     $('.sliders').slick({
         infinite: true,
         slidesToShow: 1,
@@ -7,6 +16,7 @@ $(document).ready(function () {
         dots: true,
         arrows: false,
     });
+
     $('.slideOne').slick({
         infinite: true,
         slidesToShow: 1,
@@ -75,6 +85,31 @@ $(document).ready(function () {
             }
         ]
     });
+    $('.slider3').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: '<a class="prev arrowSlide" href="#"></a>',
+        nextArrow: '<a class="next arrowSlide" href="#"></a>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 
     $(document).on("click", ".popup_open", function (e) {
         e.preventDefault();
@@ -92,6 +127,7 @@ $(document).ready(function () {
         $('.popup').removeClass('show');
         $('.window').removeClass('toshow');
     });
+
     $(document).on("click", ".offer_item a.popup_open", function () {
         let offer = $(this).closest('.offer_item');
         let title = offer.find('p.title').html();
@@ -99,6 +135,20 @@ $(document).ready(function () {
         $('#advantage_popup h4').html(title);
         $('#advantage_popup input[name=title]').val(offer.find('p.title').text());
         $('#advantage_popup p').text(text);
+    });
+
+    $(document).on("click", ".news_item  a.popup_open", function () {
+        let url = $(this).attr('data-content');
+        $.ajax({
+            type: 'post',
+            url: url,
+            dataType: "json",
+            success: function (data) {
+                $('#news_popup h4').text(data.title);
+                $('#news_popup .date').text(data.created_at);
+                $('#news_popup .body-content').text(data.html);
+            }
+        });
     });
 
     $(document).on('submit', 'form.ajax', function () {
@@ -127,6 +177,22 @@ $(document).ready(function () {
         });
 
         return false;
+    });
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
     });
 
 
