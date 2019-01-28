@@ -108,7 +108,7 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'КОНТЕНТ',
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
@@ -154,12 +154,12 @@ return [
             'url'         => 'admin/landing/news',
             'icon'        => 'file',
         ],
-//        'ACCOUNT SETTINGS',
-//        [
-//            'text' => 'Profile',
-//            'url'  => 'admin/settings',
-//            'icon' => 'user',
-//        ],
+        'ОБЩЕЕ',
+        [
+            'text' => 'Настройки сайта',
+            'url'  => 'admin/landing/option',
+            'icon' => 'file',
+        ],
 //        [
 //            'text' => 'Change Password',
 //            'url'  => 'admin/settings',
