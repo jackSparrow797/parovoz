@@ -29,17 +29,17 @@
                                         <div class="col-md-4 work_item">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <a href="#work_popup" class=" popup_open">
+                                                    <a href="#work_popup" class=" popup_open"  data-content="{{ route('work.show', $workProduct->id) }}">
                                                         @if (!$workProduct->files->isEmpty())
                                                             <img class="mx-auto"
-                                                                 src="/storage/{{ $workProduct->files->first()->path }}"
+                                                                 src="/cache/{{ $workProduct->files->first()->path }}"
                                                                  alt="">
                                                         @endif
                                                     </a>
                                                 </div>
                                                 <div class="card-footer">
                                                     <p class="text-center title">{!! $workProduct->title !!}</p>
-                                                    <a href="#work_popup"
+                                                    <a href="#work_popup" data-content="{{ route('work.show', $workProduct->id) }}"
                                                        class="btn btn-sm btn-block btn-white-outer popup_open">
                                                         Подробнее о проекте
                                                     </a>
@@ -65,7 +65,7 @@
     <div class="bgWhite px-5  pt-4 pb-5">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col">
+                <div class="col-4">
                     <ul class="tags m-0">
                         <li>Дизайн</li>
                         <li>Проектирование</li>
@@ -73,34 +73,23 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h4>Rostpolikraft</h4>
-                    <a href="" target="_blank" class="site">18ps.ru</a>
+                    <h4 class="title"></h4>
+                    <a href="" target="_blank" class="site"></a>
                 </div>
-                <div class="col text-right">
+                <div class="col-2 text-right">
                     <a href="#" class="d-inline-block mb-3 popup-close">
                         <img src="{{ asset('design/images/close-black.png') }}" alt="close">
                     </a>
                 </div>
             </div>
-            <div class="row my-4">
-                <div class="col-12">
-                    <h5>Задача</h5>
-                    <p>С другой стороны дальнейшее развитие различных форм деятельност</p>
-                </div>
-            </div>
-            <div class="row my-4">
-                <div class="col-12">
-                    <h5>Решение</h5>
-                    <p>С другой стороны дальнейшее развитие различных форм деятельност</p>
-                </div>
-            </div>
+            <div class="html"></div>
         </div>
     </div>
 
     <div class="bgGrey px-5  py-4 white">
         <div class="container-fluid">
-            <h4 class="mb-4">Хотите подобный проект?</h4>
-            <form action="" method="post">
+            <h4 class="mb-4 font-white">Хотите подобный проект?</h4>
+            <form action="{{ route('send.work') }}" class="ajax" method="post">
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">

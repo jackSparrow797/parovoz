@@ -151,6 +151,53 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on("click", ".work_item  a.popup_open", function () {
+        let url = $(this).attr('data-content');
+        $.ajax({
+            type: 'post',
+            url: url,
+            dataType: "json",
+            success: function (data) {
+                $('#work_popup h4.title').text(data.title);
+                $('#work_popup input[name=title]').text(data.title);
+                $('#work_popup .site').text(data.site).attr('href', '//' + data.site);
+                $('#work_popup .html').html(data.html);
+                sliderInit($('#work_popup .slider3'));
+            }
+        });
+    });
+
+    function sliderInit($slick_container){
+        if(!$slick_container.hasClass('slick-initialized')) {
+            // слайдер
+            $slick_container.slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                prevArrow: '<a class="prev arrowSlide" href="#"></a>',
+                nextArrow: '<a class="next arrowSlide" href="#"></a>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        }
+    }
+
     $(document).on('submit', 'form.ajax', function () {
         let action = $(this).attr('action');
         let form = $(this);

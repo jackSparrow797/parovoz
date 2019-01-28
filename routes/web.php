@@ -17,10 +17,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//mail routes
 Route::post('/email/offer', 'Mail\MailOfferController@send')->name('send.offer');
 Route::post('/email/payne', 'Mail\MailPayneController@send')->name('send.payne');
 Route::post('/email/question', 'Mail\MailQuestionController@send')->name('send.question');
+Route::post('/email/work', 'Mail\MailWorkController@send')->name('send.work');
+
+//ajax routes
 Route::post('/news/{news}', 'Landing\NewsController@show')->name('news.show');
+Route::post('/work/{work}', 'Landing\WorkController@show')->name('work.show');
+
+Route::get('/cache/uploads/works/{filename}', 'Landing\CacheImagesController@getImage')->name('cache.image');
+
 
 $data = [
     'prefix' => 'admin/landing',

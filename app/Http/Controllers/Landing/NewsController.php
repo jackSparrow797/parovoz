@@ -8,8 +8,10 @@ use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
 {
+
     /**
      * @param int $news_id
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show(int $news_id)
     {
