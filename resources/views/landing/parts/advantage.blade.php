@@ -1,6 +1,6 @@
-<div class="row what_we_can_do_you">
+<div class="row what_we_can_do_you" id="services">
     <div class="container py-5">
-        <h2 class="font-walls text-center mb-5">что мы можем сделать для вашего бизнеса</h2>
+        <h2 class="font-walls text-center mb-lg-5">что мы можем сделать для вашего бизнеса</h2>
         <div class="row my-3">
             <div class="col-lg-8 m-auto d-inline-block d-lg-block custom-width">
                 <div class="row offers_links flex-nowrap flex-lg-wrap">

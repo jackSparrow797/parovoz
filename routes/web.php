@@ -22,6 +22,8 @@ Route::post('/email/offer', 'Mail\MailOfferController@send')->name('send.offer')
 Route::post('/email/payne', 'Mail\MailPayneController@send')->name('send.payne');
 Route::post('/email/question', 'Mail\MailQuestionController@send')->name('send.question');
 Route::post('/email/work', 'Mail\MailWorkController@send')->name('send.work');
+Route::post('/email/callback', 'Mail\MailCallBackController@send')->name('send.callback');
+Route::post('/email/feedback', 'Mail\MailFeedBackController@send')->name('send.feedback');
 
 //ajax routes
 Route::post('/news/{news}', 'Landing\NewsController@show')->name('news.show');

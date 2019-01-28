@@ -1,4 +1,4 @@
-<div class="row last_works white">
+<div class="row last_works white" id="portfolio">
     <div class="container py-5">
         <h2 class="font-walls text-center mb-4">Наши последние работы</h2>
         <div class="row my-3">
@@ -62,29 +62,35 @@
 </div>
 
 <div class="work_popup  popup w-66" id="work_popup">
-    <div class="bgWhite px-5  pt-4 pb-5">
+    <div class="bgWhite  pt-4 ">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-4">
+                <div class="col-8 col-lg-4 order-lg-1">
                     <ul class="tags m-0">
                         <li>Дизайн</li>
                         <li>Проектирование</li>
                         <li>SEO оптимизация</li>
                     </ul>
                 </div>
-                <div class="col">
-                    <h4 class="title"></h4>
-                    <a href="" target="_blank" class="site"></a>
-                </div>
-                <div class="col-2 text-right">
+                <div class="col-4 col-lg-2 text-right order-lg-3">
                     <a href="#" class="d-inline-block mb-3 popup-close">
                         <img src="{{ asset('design/images/close-black.png') }}" alt="close">
                     </a>
                 </div>
+                <div class="col-12 col-lg  order-lg-2">
+                    <h4 class="title"></h4>
+                    <a href="" target="_blank" class="site"></a>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="bgWhite px-5 pt-5 pb-5">
+        <div class="container-fluid">
             <div class="html"></div>
         </div>
     </div>
+
 
     <div class="bgGrey px-5  py-4 white">
         <div class="container-fluid">

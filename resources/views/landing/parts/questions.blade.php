@@ -1,4 +1,4 @@
-<div class="row block_trust white">
+<div class="row block_trust white" id="questions">
     <div class="container py-5">
         <div class="row mb-4">
             <div class="col-12">

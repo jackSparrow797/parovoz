@@ -1,4 +1,4 @@
-<div class="row pt-5">
+<div class="row pt-5" id="reviews">
     <div class="container pt-5">
         <div class="row mb-4">
             <div class="col-12">
@@ -9,21 +9,21 @@
             @forelse($reviews as $reviewItem)
                 <div class="col-md-4 review_item">
                     <div class="card">
-                        <div class="card-body">
-                            <div class="row  align-items-center">
-                                <div class="col-10">
-                                    <p class="review-text">
-                                        &ldquo;{{ $reviewItem->text }}&rdquo;
-                                    </p>
-                                    <p class="author m-0">{{ $reviewItem->author }}</p>
-                                    <p class="post">{{ $reviewItem->post }}</p>
-                                </div>
-                                <div class="col-2 text-center">
-                                    <a data-fancybox href="/storage/{{ $reviewItem->files[0]->path }}">
-                                        <img src="/storage/{{ $reviewItem->files[0]->path }}" alt="">
-                                    </a>
-
-                                </div>
+                        <div class="row  align-items-center">
+                            <div class=" col-7 col-lg-10 pb-4">
+                                <p class="review-text hidden-over">
+                                    &ldquo;{{ $reviewItem->text }}&rdquo;
+                                </p>
+                                <p class="author m-0 d-none d-lg-block">{{ $reviewItem->author }}</p>
+                                <p class="post d-none d-lg-block">{{ $reviewItem->post }}</p>
+                                <a href="#" class="d-lg-none show_text">Показать весь текст</a>
+                            </div>
+                            <div class="col-5 col-lg-2">
+                                <a data-fancybox href="/storage/{{ $reviewItem->files[0]->path }}">
+                                    <img src="/storage/{{ $reviewItem->files[0]->path }}" alt="">
+                                </a>
+                                <p class="author m-0 d-lg-none">{{ $reviewItem->author }}</p>
+                                <p class="post d-lg-none">{{ $reviewItem->post }}</p>
                             </div>
                         </div>
                     </div>

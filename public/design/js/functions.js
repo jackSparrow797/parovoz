@@ -57,7 +57,7 @@ $(document).ready(function () {
         $('.work_section').removeClass('active');
         $(target).addClass('active');
 
-         $(".sliderOne").slick('reinit');
+        $(".sliderOne").slick('reinit');
     });
 
     $('.slider4').slick({
@@ -167,8 +167,8 @@ $(document).ready(function () {
         });
     });
 
-    function sliderInit($slick_container){
-        if(!$slick_container.hasClass('slick-initialized')) {
+    function sliderInit($slick_container) {
+        if (!$slick_container.hasClass('slick-initialized')) {
             // слайдер
             $slick_container.slick({
                 infinite: false,
@@ -201,10 +201,15 @@ $(document).ready(function () {
     $(document).on('submit', 'form.ajax', function () {
         let action = $(this).attr('action');
         let form = $(this);
+        let modal_target = false;
+        if (form.hasClass('modal-form')) {
+            modal_target = form.attr('data-close');
+        }
         form.find('input,textarea').removeClass('error');
         let method = $(this).attr('method');
         let msg = form.serialize();
         form.find('input,textarea').removeClass('error');
+        form.find('.form-error').remove();
         $.ajax({
             type: method,
             url: action,
@@ -213,12 +218,17 @@ $(document).ready(function () {
             success: function (data) {
                 if (!!(data.message)) {
                     form[0].reset();
-                    form.find('.response').text(data.message);
+                    $('#success .modal-body').html(data.message);
+                    $('#success').modal('show');
+                    if (!!modal_target) {
+                        $('#' + modal_target).modal('hide');
+                    }
                 }
             },
             error: function (xhr, str) {
                 $.each(xhr.responseJSON.errors, function (index, value) {
-                    form.find('[name=' + index +']').addClass('error');
+                    form.find('[name=' + index + ']').addClass('error');
+                    form.find('[name=' + index + ']').parent().append('<span class="form-error"> ' + value + ' </span>');
                 });
             }
         });
@@ -258,5 +268,19 @@ $(document).ready(function () {
         ]
     });
 
+
+    $(document).on('click', '.landing-menu a', function (e) {
+        e.preventDefault();
+        let target = $(this).attr('href');
+        let top = $(target).offset().top;
+
+        //анимируем переход на расстояние - top за 700 мс
+        $('body,html').animate({scrollTop: top}, 700);
+    });
+
+    $(document).on("click", '.show_text', function (e) {
+        e.preventDefault();
+        $(this).parent().find('.review-text').removeClass('hidden-over');
+    });
 
 });

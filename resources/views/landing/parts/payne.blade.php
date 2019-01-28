@@ -8,7 +8,6 @@
             <div class="col-md mt-4 mt-md-0">
                 <form action="{{ route('send.payne') }}" class="ajax form-green" method="post">
                     @csrf
-                    <div class="response green"></div>
                     <div class="form-group">
                         <label for="">Как вас зовут*</label>
                         <input type="text" name="name" class="form-control radius-none" placeholder="Введите ваше имя">

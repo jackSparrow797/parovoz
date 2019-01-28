@@ -1,12 +1,13 @@
-<div class="row header position-absolute white">
+<div class="row header white">
     <div class="container-fluid">
-        <div class="row align-items-center my-3">
-            <div class="col-md">
+        <div class="row align-items-center my-lg-3">
+            <div class="col col-md">
                 <a href="/">
-                    <img src="{{ asset('design/images/logo.svg') }}" alt="">
+                    <img class="d-none d-lg-block" src="{{ asset('design/images/logo.svg') }}" alt="logo">
+                    <img class="d-lg-none" src="{{ asset('design/images/logo_mobile.png') }}" alt="logo mobile">
                 </a>
             </div>
-            <div class="col-md">
+            <div class="d-none d-lg-block col-md">
                 <p class="m-0">
                     +7 (964) 184 71 44<br/>
                     <a href="#call_back" data-toggle="modal">
@@ -14,20 +15,20 @@
                     </a>
                 </p>
             </div>
-            <div class="col-md">
+            <div class="d-none d-lg-block col-md">
                 <p class="m-0">
                     PAROVOZDIGITAL@GMAIL.COM<br/>
-                    <a href="#feedback" data-toggle="modal">
+                    <a href="#feed_back" data-toggle="modal">
                         написать нам
                     </a>
                 </p>
             </div>
-            <div class="col-md">
+            <div class="d-none d-lg-block col-md text-center">
                 <a href="" target="_blank">
                     <img src="{{ asset('design/images/viber.svg') }}" alt="">
                 </a>
             </div>
-            <div class="col-md text-right">
+            <div class="col-4 col-md text-right">
                 <a href="#" class="menu_open">
                     <img src="{{ asset('design/images/menu.png') }}" alt="">
                 </a>
@@ -40,7 +41,7 @@
         <img src="{{ asset('design/images/close.png') }}" alt="close">
     </a>
     <div class="menu-body ">
-        <ul class="">
+        <ul class="landing-menu">
             <li><a href="#advantages">Преимущества</a></li>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#portfolio">Портфолио</a></li>
@@ -50,7 +51,7 @@
         </ul>
         <p  class="text-right">
             PAROVOZDIGITAL@GMAIL.COM<br/>
-            <a href="#feedback" data-toggle="modal">
+            <a href="#feed_back" data-toggle="modal">
                 написать нам
             </a>
         </p>

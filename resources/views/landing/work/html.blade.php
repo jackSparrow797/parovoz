@@ -1,4 +1,4 @@
-<div class="row slider3 blueArrows sliderPadding mt-5 row-slider">
+<div class="row slider3 blueArrows sliderPadding row-slider">
     @foreach($work->files as $file)
         {{--@dd($file)--}}
         <div class="col-12">
