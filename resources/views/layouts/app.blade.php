@@ -8,18 +8,7 @@
 
     @include('landing.parts.header')
 
-    <div class="row sliders">
-        @forelse($sliders as $slider)
-            <div class="slider_item col-12" style="background-image: url('/storage/{{ $slider->files[0]->path }}')">
-                <div class="slider_description white">
-                    <h1 class="font-walls">{!! $slider->title !!}</h1>
-                    <h4>{{ $slider->description }}</h4>
-                </div>
-
-            </div>
-        @empty
-        @endforelse
-    </div>
+    @include('landing.parts.slider')
 
     <div class="row advantages" id="advantages">
         <div class="container py-5">
@@ -101,17 +90,39 @@
     <footer class="row white py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md">+7 (964) 184 71 44</div>
-                <div class="col-md">+7 (965) 841 53 64</div>
+                <div class="col-md">{{ $options->phone1 }}</div>
+                <div class="col-md">{{ $options->phone2 }}</div>
                 <div class="col-md">
                     <a href="#call_back" data-toggle="modal">
                         перезвоните мне
                     </a>
                 </div>
                 <div class="col-md">
-                    <a href="" target="_blank">
-                        <img src="{{ asset('design/images/viber.svg') }}" alt="">
-                    </a>
+                    @if ($options->viber != '')
+                        <a href="{{ $options->viber }}" class="d-inline-block mx-2" target="_blank">
+                            <img src="{{ asset('design/images/viber.svg') }}" alt="">
+                        </a>
+                    @endif
+                    @if ($options->whatsapp != '')
+                        <a href="{{ $options->whatsapp }}" class="d-inline-block mx-2" target="_blank">
+                            <img src="{{ asset('design/images/whatsapp.svg') }}" alt="">
+                        </a>
+                    @endif
+                    @if ($options->skype != '')
+                        <a href="{{ $options->skype }}" class="d-inline-block mx-2" target="_blank">
+                            <img src="{{ asset('design/images/skype.svg') }}" alt="">
+                        </a>
+                    @endif
+                    @if ($options->vk != '')
+                        <a href="{{ $options->vk }}" class="d-inline-block mx-2" target="_blank">
+                            <img src="{{ asset('design/images/vk.svg') }}" alt="">
+                        </a>
+                    @endif
+                    @if ($options->instagram != '')
+                        <a href="{{ $options->instagram }}" class="d-inline-block mx-2" target="_blank">
+                            <img src="{{ asset('design/images/insta.svg') }}" alt="">
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>

@@ -62,4 +62,7 @@ Route::group($data, function () {
     Route::resource('review', 'ReviewController')->except([
         'show'
     ]);
+    Route::resource('option', 'OptionController')->except([
+        'show', 'create', 'store', 'destroy'
+    ]);
 });

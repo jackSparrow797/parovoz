@@ -9,7 +9,7 @@
             </div>
             <div class="d-none d-lg-block col-md">
                 <p class="m-0">
-                    +7 (964) 184 71 44<br/>
+                    {{ $options->phone1 }}<br/>
                     <a href="#call_back" data-toggle="modal">
                         перезвоните мне
                     </a>
@@ -17,18 +17,42 @@
             </div>
             <div class="d-none d-lg-block col-md">
                 <p class="m-0">
-                    PAROVOZDIGITAL@GMAIL.COM<br/>
+                    {{ $options->email }}<br/>
                     <a href="#feed_back" data-toggle="modal">
                         написать нам
                     </a>
                 </p>
             </div>
+
             <div class="d-none d-lg-block col-md text-center">
-                <a href="" target="_blank">
-                    <img src="{{ asset('design/images/viber.svg') }}" alt="">
-                </a>
+                @if ($options->viber != '')
+                    <a href="{{ $options->viber }}" class="d-inline-block mx-2" target="_blank">
+                        <img src="{{ asset('design/images/viber.svg') }}" alt="">
+                    </a>
+                @endif
+                @if ($options->whatsapp != '')
+                    <a href="{{ $options->whatsapp }}" class="d-inline-block mx-2" target="_blank">
+                        <img src="{{ asset('design/images/whatsapp.svg') }}" alt="">
+                    </a>
+                @endif
+                @if ($options->skype != '')
+                    <a href="{{ $options->skype }}" class="d-inline-block mx-2" target="_blank">
+                        <img src="{{ asset('design/images/skype.svg') }}" alt="">
+                    </a>
+                @endif
+                @if ($options->vk != '')
+                    <a href="{{ $options->vk }}" class="d-inline-block mx-2" target="_blank">
+                        <img src="{{ asset('design/images/vk.svg') }}" alt="">
+                    </a>
+                @endif
+                @if ($options->instagram != '')
+                    <a href="{{ $options->instagram }}" class="d-inline-block mx-2" target="_blank">
+                        <img src="{{ asset('design/images/insta.svg') }}" alt="">
+                    </a>
+                @endif
             </div>
-            <div class="col-4 col-md text-right">
+
+            <div class="col-4 col-md-1 text-right">
                 <a href="#" class="menu_open">
                     <img src="{{ asset('design/images/menu.png') }}" alt="">
                 </a>
@@ -49,22 +73,45 @@
             <li><a href="#reviews">Отзывы</a></li>
             <li><a href="#questions">Задать вопрос</a></li>
         </ul>
-        <p  class="text-right">
-            PAROVOZDIGITAL@GMAIL.COM<br/>
+        <p class="text-right">
+            {{ $options->email }}<br/>
             <a href="#feed_back" data-toggle="modal">
                 написать нам
             </a>
         </p>
         <p class="text-right">
-            <span class="d-inline-block mr-3">+7 (965) 841 53 64</span> <span class="d-inline-block ">+7 (964) 184 71 44</span><br/>
+            <span class="d-inline-block mr-3">{{ $options->phone2 }}</span> <span
+                    class="d-inline-block ">{{ $options->phone1 }}</span><br/>
             <a href="#call_back" data-toggle="modal">
                 перезвоните мне
             </a>
         </p>
         <div class="mb-4">
-            <a href="" target="_blank">
-                <img src="{{ asset('design/images/viber.svg') }}" alt="">
-            </a>
+            @if ($options->viber != '')
+                <a href="{{ $options->viber }}" class="d-inline-block mx-2" target="_blank">
+                    <img src="{{ asset('design/images/viber.svg') }}" alt="">
+                </a>
+            @endif
+            @if ($options->whatsapp != '')
+                <a href="{{ $options->whatsapp }}" class="d-inline-block mx-2" target="_blank">
+                    <img src="{{ asset('design/images/whatsapp.svg') }}" alt="">
+                </a>
+            @endif
+            @if ($options->skype != '')
+                <a href="{{ $options->skype }}" class="d-inline-block mx-2" target="_blank">
+                    <img src="{{ asset('design/images/skype.svg') }}" alt="">
+                </a>
+            @endif
+            @if ($options->vk != '')
+                <a href="{{ $options->vk }}" class="d-inline-block mx-2" target="_blank">
+                    <img src="{{ asset('design/images/vk.svg') }}" alt="">
+                </a>
+            @endif
+            @if ($options->instagram != '')
+                <a href="{{ $options->instagram }}" class="d-inline-block mx-2" target="_blank">
+                    <img src="{{ asset('design/images/insta.svg') }}" alt="">
+                </a>
+            @endif
         </div>
     </div>
 </div>
