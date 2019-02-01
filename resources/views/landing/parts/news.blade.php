@@ -8,7 +8,7 @@
 
         <div class="row slider3 blueArrows sliderPadding mt-5">
             @forelse($news as $newsItem)
-                <div class="col-md-4 news_item">
+                <div class="col-12 news_item">
                     <div class="card">
                         <div class="card-body">
                             <a href="#news_popup" class=" popup_open" data-content="{{ route('news.show', $newsItem->id) }}">

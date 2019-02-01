@@ -11,7 +11,7 @@ class CacheImagesController extends Controller
     public function getImage($filename)
     {
         $img = Image::cache(function($image) use($filename) {
-            return $image->make('http://parovoz18.local/storage/uploads/works/' . $filename)
+            return $image->make(env('APP_URL') . '/storage/uploads/works/' . $filename)
                 ->fit(310, 215, null, 'top');
             //->response();
         }, 42500, true);
