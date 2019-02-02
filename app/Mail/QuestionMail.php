@@ -30,7 +30,6 @@ class QuestionMail extends Mailable
     public function build()
     {
         return $this->view('landing.emails.question')
-            ->from('jack123456789@mail.ru')
             ->with([
                 'fields' => $this->fields,
             ])

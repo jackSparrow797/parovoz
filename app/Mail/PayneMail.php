@@ -30,7 +30,6 @@ class PayneMail extends Mailable
     public function build()
     {
         return $this->view('landing.emails.payne')
-            ->from('jack123456789@mail.ru')
             ->with([
                 'fields' => $this->fields,
             ])

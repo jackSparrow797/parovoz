@@ -32,7 +32,6 @@ class OfferMail extends Mailable
     public function build()
     {
         return $this->view('landing.emails.offer')
-            ->from('jack123456789@mail.ru')
             ->with([
                 'fields' => $this->fields,
             ])
