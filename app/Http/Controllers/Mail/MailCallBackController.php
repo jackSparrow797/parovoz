@@ -13,7 +13,7 @@ class MailCallBackController extends Controller
     public function send(CallBackRequest $request)
     {
         $request->validated();
-        Mail::to(SiteOptions::find(1)->get('emailTo'))
+        Mail::to(SiteOptions::find(1)->emailTo)
             ->bcc(env('MAIL_CC'))
             ->send(new CallBackMail($request));
         return response()->json([
