@@ -5,9 +5,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta name="Keywords" content="">
-    <meta name="description" content="">
+    <title>{{ $options->title ?? config('app.name', 'Laravel') }}</title>
+    <meta name="Keywords" content="{{ $options->keywords }}">
+    <meta name="description" content="{{ $options->description }}">
     <!-- Scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
