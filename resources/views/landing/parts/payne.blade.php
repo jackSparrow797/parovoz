@@ -7,6 +7,7 @@
             </div>
             <div class="col-md mt-4 mt-md-0">
                 <form action="{{ route('send.payne') }}" class="ajax form-green" method="post">
+                    {!! RecaptchaV3::field('register') !!}
                     @csrf
                     <div class="form-group">
                         <label for="">Как вас зовут*</label>

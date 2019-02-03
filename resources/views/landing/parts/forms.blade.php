@@ -11,6 +11,7 @@
             </div>
             <form action="{{ route('send.callback') }}" class="ajax form-green modal-form" data-close="call_back"
                   method="post">
+                {!! RecaptchaV3::field('register') !!}
                 <div class="modal-body">
                     @csrf
                     <div class="form-group">
@@ -43,6 +44,7 @@
             </div>
             <form action="{{ route('send.feedback') }}" class="ajax form-green modal-form" data-close="feed_back"
                   method="post">
+                {!! RecaptchaV3::field('register') !!}
                 <div class="modal-body">
                     @csrf
                     <div class="form-group">

@@ -11,6 +11,7 @@
             </div>
             <div class="col-md mt-4 mt-md-0">
                 <form action="{{ route('send.question') }}" class="ajax form-white-round" method="post">
+                    {!! RecaptchaV3::field('register') !!}
                     @csrf
                     <div class="response green"></div>
                     <div class="form-group">

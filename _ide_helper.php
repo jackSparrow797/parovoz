@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.20 on 2019-01-27 19:30:00.
+ * Generated for Laravel 5.7.20 on 2019-02-03 15:22:56.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14007,6 +14007,61 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace Lunaweb\RecaptchaV3\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class RecaptchaV3 {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function verify($token, $action = null)
+        {
+            return \Lunaweb\RecaptchaV3\RecaptchaV3::verify($token, $action);
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function sitekey()
+        {
+            return \Lunaweb\RecaptchaV3\RecaptchaV3::sitekey();
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function initJs()
+        {
+            return \Lunaweb\RecaptchaV3\RecaptchaV3::initJs();
+        }
+        
+        /**
+         * 
+         *
+         * @param $action
+         * @static 
+         */ 
+        public static function field($action, $name = 'g-recaptcha-response')
+        {
+            return \Lunaweb\RecaptchaV3\RecaptchaV3::field($action, $name);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -16440,6 +16495,8 @@ namespace  {
     class Image extends \Intervention\Image\Facades\Image {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class RecaptchaV3 extends \Lunaweb\RecaptchaV3\Facades\RecaptchaV3 {}
  
 }
 

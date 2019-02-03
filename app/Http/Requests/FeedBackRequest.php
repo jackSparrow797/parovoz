@@ -26,7 +26,8 @@ class FeedBackRequest extends FormRequest
         return [
             'name' => 'required',
             'text' => 'required',
-            'phone' => 'required'
+            'phone' => 'required',
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5'
         ];
     }
 

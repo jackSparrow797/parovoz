@@ -96,6 +96,7 @@
         <div class="container-fluid">
             <h4 class="mb-4 font-white">Хотите подобный проект?</h4>
             <form action="{{ route('send.work') }}" class="ajax" method="post">
+                {!! RecaptchaV3::field('register') !!}
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">

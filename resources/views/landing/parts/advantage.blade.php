@@ -61,6 +61,7 @@
         <h4></h4>
         <p></p>
         <form action="{{ route('send.offer') }}" class="ajax" method="post">
+            {!! RecaptchaV3::field('register') !!}
             @csrf
             <div class="response green"></div>
             <div class="form-group">
