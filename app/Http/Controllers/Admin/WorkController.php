@@ -19,9 +19,8 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::paginate(15);
-
-        return view('admin.work.index', compact('works'));
+        $sections = Section::all();
+        return view('admin.work.index', compact( 'sections'));
     }
 
     /**

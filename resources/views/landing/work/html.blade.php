@@ -1,5 +1,5 @@
 <div class="row slider3 blueArrows sliderPadding row-slider">
-    @foreach($work->files as $file)
+    @foreach($work->files->sortBy('sort') as $file)
         {{--@dd($file)--}}
         <div class="col-12">
             <div class="card border-none">
