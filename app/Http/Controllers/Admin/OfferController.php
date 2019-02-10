@@ -95,13 +95,15 @@ class OfferController extends Controller
         $offer = Offer::find($id);
         $offer->update($request->all());
 
-        if ($request->file('file')) {
-            $path = [];
-            foreach ($offer->files as $file) {
-                $path[] = $file->path;
+        if ($request->input('files_sort')) {
+            foreach ($request->input('files_sort') as $file_id => $file_sort) {
+                $file = Files::find($file_id);
+                $file->sort = $file_sort;
+                $save = $file->save();
             }
-            $del = Storage::disk('public')->delete($path);
-            $offer->files()->delete();
+        }
+
+        if ($request->file('file')) {
 
             foreach ($request->file('file') as $file) {
                 $path = $file->store('uploads/offer', 'public');

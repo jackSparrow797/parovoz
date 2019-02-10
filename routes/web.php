@@ -65,4 +65,7 @@ Route::group($data, function () {
     Route::resource('option', 'OptionController')->except([
         'show', 'create', 'store', 'destroy'
     ]);
+    Route::resource('files', 'FileController')->only([
+        'destroy'
+    ]);
 });

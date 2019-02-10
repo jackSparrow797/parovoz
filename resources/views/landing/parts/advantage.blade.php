@@ -26,7 +26,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <a href="#advantage_popup" class="link_img popup_open">
-                                            @forelse($offer->files as $file_key => $file)
+                                            @forelse($offer->files->sortBy('sort')->values() as $file_key => $file)
                                                 <img class="mx-auto @php echo ($file_key == 0) ? "hover" : '' @endphp"
                                                      src="/storage/{{ $file->path }}" alt="">
                                             @empty

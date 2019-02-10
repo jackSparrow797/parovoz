@@ -1,11 +1,12 @@
-
 <div class="form-group">
     <label for="">Наименование</label>
-    <input class="form-control" type="text" name="title" placeholder="Наименование" value="{{ $offer->title ?? "" }}" required>
+    <input class="form-control" type="text" name="title" placeholder="Наименование" value="{{ $offer->title ?? "" }}"
+           required>
 </div>
 <div class="form-group">
     <label for="">Описание</label>
-    <textarea name="text" class="form-control" rows="5" placeholder="Наименование"  required>{{ $offer->text ?? "" }}</textarea>
+    <textarea name="text" class="form-control" rows="5" placeholder="Наименование"
+              required>{{ $offer->text ?? "" }}</textarea>
 </div>
 <div class="form-group">
     <label for="">Раздел</label>
@@ -16,17 +17,29 @@
         @endforelse
     </select>
 </div>
+
 <div class="form-group">
-    <label for="">Картинка</label>
-    <input class="form-control"  placeholder="Картинка" multiple  type="file" name="file[]" >
+    <label for="">Картинки</label>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" placeholder="Добавить картинки" multiple  name="file[]" id="customFile">
+        <label class="custom-file-label"   for="customFile">Добавить картинки</label>
+    </div>
 </div>
 @if (isset($offer->files))
-    <div class="form-group">
-        @forelse($offer->files as $file)
-            <img src="/storage/{{ $file->path }}" style="max-width: 100%;" alt="">
-        @empty
-            <p>Нет Картинки</p>
-        @endforelse
+    <h4>Изображения</h4>
+    <div class="row">
+        <div class="col">Изображение</div>
+        <div class="col">Сортировка</div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            @forelse($offer->files->sortBy('sort') as $file)
+                @include ('admin.files.files_edit')
+            @empty
+                <p>Нет Картинки</p>
+            @endforelse
+        </div>
     </div>
 @endif
 <div class="form-group">

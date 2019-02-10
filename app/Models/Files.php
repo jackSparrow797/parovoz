@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Files extends Model
 {
-    protected $fillable = ['filetable_id', 'filetable_type', 'path'];
+    protected $fillable = ['filetable_id', 'filetable_type', 'path', 'sort'];
 
     public function filetable()
     {

@@ -117,11 +117,16 @@ class WorkController extends Controller
             $work->tags()->attach($request->input('tags'));
         }
 
+        if ($request->input('files_sort')) {
+            foreach ($request->input('files_sort') as $file_id => $file_sort) {
+                $file = Files::find($file_id);
+                $file->sort = $file_sort;
+                $save = $file->save();
+            }
+        }
+
         //update files
         if ($request->file('file')) {
-            //delete old files
-            Files::delFiles($work->files);
-            $work->files()->delete();
             //add new files
             $files = Files::saveFiles($request->file('file'), 'uploads/works');
             $work->files()->saveMany($files);

@@ -32,7 +32,7 @@
                                                     <a href="#work_popup" class=" popup_open"  data-content="{{ route('work.show', $workProduct->id) }}">
                                                         @if (!$workProduct->files->isEmpty())
                                                             <img class="mx-auto"
-                                                                 src="/cache/{{ $workProduct->files->first()->path }}"
+                                                                 src="/cache/{{ $workProduct->files->sortBy('sort')->first()->path }}"
                                                                  alt="">
                                                         @endif
                                                     </a>

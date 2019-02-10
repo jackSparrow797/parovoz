@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                @forelse($item->files as $file)
+                                @forelse($item->files->sortBy('sort') as $file)
                                     <img src="/storage/{{ $file->path }}" alt="">
                                 @empty
                                     Нет картинок
