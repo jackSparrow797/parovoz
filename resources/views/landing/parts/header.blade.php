@@ -11,7 +11,7 @@
                 <p class="m-0">
                     {{ $options->phone1 }}<br/>
                     <a href="#call_back" data-toggle="modal">
-                        перезвоните мне
+                        Позвоните нам
                     </a>
                 </p>
             </div>
@@ -19,7 +19,7 @@
                 <p class="m-0">
                     {{ $options->email }}<br/>
                     <a href="#feed_back" data-toggle="modal">
-                        написать нам
+                        Напишите нам
                     </a>
                 </p>
             </div>
@@ -76,14 +76,14 @@
         <p class="text-right">
             {{ $options->email }}<br/>
             <a href="#feed_back" data-toggle="modal">
-                написать нам
+                Напишите нам
             </a>
         </p>
         <p class="text-right">
             <span class="d-inline-block mr-3">{{ $options->phone2 }}</span> <span
                     class="d-inline-block ">{{ $options->phone1 }}</span><br/>
             <a href="#call_back" data-toggle="modal">
-                перезвоните мне
+                Позвоните нам
             </a>
         </p>
         <div class="mb-4">

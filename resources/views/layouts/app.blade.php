@@ -94,7 +94,7 @@
                 <div class="col-md">{{ $options->phone2 }}</div>
                 <div class="col-md">
                     <a href="#call_back" data-toggle="modal">
-                        перезвоните мне
+                        Позвоните нам
                     </a>
                 </div>
                 <div class="col-md">

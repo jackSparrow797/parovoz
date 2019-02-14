@@ -1,6 +1,6 @@
 <div class="row payne_block">
     <div class="container py-5">
-        <h2 class="font-walls text-center mb-4">Понравились работы?<br/>Оставь нам заявку</h2>
+        <h2 class="font-walls text-center mb-4">Заинтересовался?<br/>Оставь нам заявку</h2>
         <div class="row">
             <div class="col-md">
                 <img src="{{ asset('design/images/mpayne.png') }}" alt="major Payne">

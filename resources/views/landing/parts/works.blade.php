@@ -26,7 +26,7 @@
                             <div>
                                 <div class="row ">
                                     @foreach ($chunk as $workProduct)
-                                        <div class="col-md-4 work_item">
+                                        <div class="col-12 work_item">
                                             <div class="card">
                                                 <div class="card-body">
                                                     <a href="#work_popup" class=" popup_open"  data-content="{{ route('work.show', $workProduct->id) }}">
