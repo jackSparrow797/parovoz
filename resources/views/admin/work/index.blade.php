@@ -26,7 +26,7 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 @forelse($sections->values() as $key_sect => $sect_item)
-                    <div class="tab-pane fade show @php echo ($key_sect == 0) ? "active" : '' @endphp" id="section-tab{{ $sect_item->id }}" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade show @php echo ($key_sect == 0) ? "active" : '' @endphp" id="section-tab{{ $sect_item->id }}" role="tabpanel" aria-labelledby="tab{{ $sect_item->id }}">
                         @forelse($sect_item->work as $item)
                             {{--                @dd($item->files->path)--}}
                             <div class="card mb-3">
@@ -34,7 +34,7 @@
                                     <div class="row">
                                         <div class="col">
                                             @forelse($item->files->sortBy('sort') as $file)
-                                                <img src="/storage/{{ $file->path }}" alt="">
+                                                <img src="/storage/{{ $file->path }}" style="width: 100%;" alt="">
                                             @empty
                                                 Нет картинок
                                             @endforelse
@@ -51,10 +51,10 @@
                                             {{ $item->site }}
                                         </div>
                                         <div class="col">
-                                            {{ $item->task }}
+                                            {!! $item->task !!}
                                         </div>
                                         <div class="col">
-                                            {{ $item->answer }}
+                                            {!! $item->answer !!}
                                         </div>
                                         <div class="col">
                                             <form onsubmit="if(confirm('Удалить?')) { return true } else { return false }"

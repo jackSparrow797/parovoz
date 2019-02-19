@@ -12,7 +12,7 @@
                         <div class="row  align-items-center">
                             <div class=" col-7 col-lg-10 pb-4">
                                 <p class="review-text hidden-over">
-                                    &ldquo;{{ $reviewItem->text }}&rdquo;
+                                    &ldquo;{!! $reviewItem->text !!}&rdquo;
                                 </p>
                                 <p class="author m-0 d-none d-lg-block">{{ $reviewItem->author }}</p>
                                 <p class="post d-none d-lg-block">{{ $reviewItem->post }}</p>

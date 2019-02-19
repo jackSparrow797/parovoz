@@ -13,12 +13,12 @@
 <div class="row my-4">
     <div class="col-12">
         <h5>Задача</h5>
-        <p>{{ $work->task ?? '' }}</p>
+        <p>{!! $work->task ?? '' !!}</p>
     </div>
 </div>
 <div class="row my-4">
     <div class="col-12">
         <h5>Решение</h5>
-        <p>{{ $work->answer ?? '' }}</p>
+        <p>{!! $work->answer ?? '' !!}</p>
     </div>
 </div>

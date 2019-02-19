@@ -22,11 +22,11 @@
                 <div class="col-12 work_section  @php echo ($key == 0) ? 'active' : '' @endphp"
                      id="work{{ $sections->id }}">
                     <div class="slideOne">
-                        @forelse($sections->work->chunk(2) as $chunk)
+                        @forelse($sections->work->chunk(6) as $chunk)
                             <div>
                                 <div class="row ">
                                     @foreach ($chunk as $workProduct)
-                                        <div class="col-12 work_item">
+                                        <div class="col-md-4 work_item">
                                             <div class="card">
                                                 <div class="card-body">
                                                     <a href="#work_popup" class=" popup_open"  data-content="{{ route('work.show', $workProduct->id) }}">

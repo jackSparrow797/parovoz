@@ -17,7 +17,7 @@ $(document).ready(function () {
                dataType: "json",
                success: function (data) {
                    if (!!(data.response)) {
-                       $('.file_block' + id).remove();
+                       $('.myTabfile_block' + id).remove();
 
                    }
                },

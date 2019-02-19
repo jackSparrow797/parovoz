@@ -35,7 +35,7 @@
                                 </a>
                             </div>
                             <div class="col">
-                                {{ $item->text }}
+                                {!! $item->text !!}
                             </div>
                             <div class="col">
                                 <form onsubmit="if(confirm('Удалить?')) { return true } else { return false }"

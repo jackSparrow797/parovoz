@@ -1,3 +1,4 @@
+<script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 <div class="form-group">
     <label for="">Раздел</label>
     <select class="form-control" name="section_id" id="">
@@ -15,11 +16,11 @@
 </div>
 <div class="form-group">
     <label for="">Задача</label>
-    <textarea name="task" class="form-control" rows="4" placeholder="Задача">{{ $work->task ?? "" }}</textarea>
+    <textarea name="task" class="form-control" id="editor" rows="8" placeholder="Задача">{!! $work->task ?? "" !!}</textarea>
 </div>
 <div class="form-group">
     <label for="">Решение</label>
-    <textarea name="answer" class="form-control" rows="4" placeholder="Решение">{{ $work->answer ?? "" }}</textarea>
+    <textarea name="answer" class="form-control" id="editor1" rows="4" placeholder="Решение">{!! $work->answer ?? "" !!}</textarea>
 </div>
 <div class="form-group">
     <label for="">Сайт</label>
@@ -71,3 +72,15 @@
 <div class="form-group">
     <input type="submit" class="btn btn-success" value="Сохранить">
 </div>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+    ClassicEditor
+        .create( document.querySelector( '#editor1' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
